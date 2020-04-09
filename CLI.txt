@@ -5,6 +5,14 @@ bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShe
 	root
 	MoeClub.org
 
+change ubuntu 16.0.4 repository
+# Ali China
+curl https://github.com/kirincastle/docker-v2ray-php-nginx/raw/master/aliChinaSource.list | sudo tee /etc/apt/sources.list \
+&& wget 'https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh' \
+&& chmod +x tcp.sh \
+&& ./tcp.sh
+
+# South Korean
 curl https://raw.githubusercontent.com/kirincastle/docker-v2ray-php-nginx/master/krsource.list | sudo tee /etc/apt/sources.list \
 && wget 'https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh' \
 && chmod +x tcp.sh \
@@ -16,6 +24,8 @@ apt update \
 && apt autoremove -y \
 && systemctl reboot
 
+# install docker and docker-CE
+
 curl -fsSL https://get.docker.com -o get-docker.sh \
 && sh get-docker.sh \
 && curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
@@ -24,6 +34,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh \
 && git clone https://github.com/kirincastle/docker-v2ray-php-nginx.git \
 && cd docker-v2ray-php-nginx \
 && chmod +x ./init-letsencrypt.sh
+
 
 修改v2ray配置
 进入docker-v2ray目录开始修改配置。
