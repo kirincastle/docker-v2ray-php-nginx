@@ -105,7 +105,7 @@ git clone https://github.com/kirincastle/docker-v2ray-php-nginx.git
 用这个网址来生成version 1 uuid
 https://www.uuidgenerator.net/version1
 
-**4) `data/nginx/conf.d/v2020_v2ray.conf`**
+**4) `data/nginx/conf.d/v2ray.conf`**
 
 修改所有`your_domain`为自己的域名，其他地方，如果上面可以修改的地方你没修改，那么除了域名之外的也不用修改了。
 
