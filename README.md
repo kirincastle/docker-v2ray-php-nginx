@@ -26,8 +26,8 @@ apt -y install git
 git clone https://github.com/kirincastle/docker-v2ray-php-nginx.git
 
 cd docker-v2ray-php-nginx \
-&& chmod +x tcp.sh \
-&& ./tcp.sh
+chmod +x tcp.sh \
+./tcp.sh
 
 具体步骤参考下面链接，大同小异，记得在某个界面选“no". 不要问我是哪个界面。
 
