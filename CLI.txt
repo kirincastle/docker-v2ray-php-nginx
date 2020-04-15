@@ -13,7 +13,7 @@ curl https://github.com/kirincastle/docker-v2ray-php-nginx/raw/master/aliChinaSo
 && ./tcp.sh
 
 # BBR
-wget 'https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh' \
+wget --no-check-certificate 'https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh' \
 && chmod +x tcp.sh \
 && ./tcp.sh
 
