@@ -1,5 +1,5 @@
 {
-  "domain": "yourdomain/subpath",
+  "domain": "https://yourdomain/subpath",
   "disable_icon_download": false,
   "signups_allowed": false,
   "signups_verify": false,
