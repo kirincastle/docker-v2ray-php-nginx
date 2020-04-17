@@ -1,6 +1,20 @@
 version: '3'
 
 services:
+  bitwarden:
+   image: bitwardenrs/server
+   container_name: bitwarden
+   restart: always
+   volumes:
+    - ./data/bitwarden:/data
+   environment:
+    WEBSOCKET_ENABLED: "true"
+    SIGNUPS_ALLOWED: "true"
+    DOMAIN: "https://jpkab.kkzam.xyz/bwd"
+    admin_token: "fdwer1556445623gwe56456"
+   ports:
+     - "8080:80"
+      
   nginx:
     image: nginx:latest
     container_name: nginx
@@ -17,6 +31,7 @@ services:
     links:
       - v2ray:v2ray #连接v2ray容器，映射主机名，此处非常重要，如果没有这个映射nginx就无法连接v2ray的websocket服务
       - php:docker-php-fpm
+      - bitwarden:bitwarden
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
 
   php:
