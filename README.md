@@ -131,6 +131,6 @@ docker exec v2ray bash -c "v2ray info"
 
 #######
 
-bitwarden 参考一下链接
+bitwarden 参考一下链接 (bitwarden's config.json will override env config in docker-compose.yml)
 
 https://github.com/dani-garcia/bitwarden_rs
