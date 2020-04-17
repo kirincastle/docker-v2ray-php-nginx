@@ -12,6 +12,7 @@ https://github.com/Jrohy/multi-v2ray
 
 ## 更新日志
 
+* 2020年4月17日: 增加了bitwarden，speedtest测速时候的上传问题还是没有解决。
 * 2020年4月9日：增加php7.2-fpm, 使用speedtest，使用 Jrohy/multi-v2ray
 * 2020年3月3日：增加v2ray并使用ws+tls方式实现代理服务；
 * 2020年3月1日：增加nginx服务并启用certbot证书；
@@ -127,3 +128,9 @@ docker exec v2ray bash -c "v2ray info"
 
 现在你可以开始使用了。
 
+
+#######
+
+bitwarden 参考一下链接
+
+https://github.com/dani-garcia/bitwarden_rs

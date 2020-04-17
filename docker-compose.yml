@@ -11,7 +11,7 @@ services:
 #    WEBSOCKET_ENABLED: "true"
 #    SIGNUPS_ALLOWED: "true"
 #    DOMAIN: "yourdomain/subpath"
-#    admin_token: "fdwewersdfet5fgsdfgwe56456"
+#    admin_token: "fdwer1556445623gwe56456"
 #  ports:
 #     - "8080:80"
       
