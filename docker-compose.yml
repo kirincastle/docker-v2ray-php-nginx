@@ -10,8 +10,8 @@ services:
 #  environment:
 #    WEBSOCKET_ENABLED: "true"
 #    SIGNUPS_ALLOWED: "true"
-#    DOMAIN: "https://jpkaaa.kkzam.xyz/bwd"
-#    admin_token: "fdwertwert345fgsdfgwe56456"
+#    DOMAIN: "yourdomain/subpath"
+#    admin_token: "fdwewersdfet5fgsdfgwe56456"
 #  ports:
 #     - "8080:80"
       
