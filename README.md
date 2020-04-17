@@ -133,6 +133,10 @@ docker exec v2ray bash -c "v2ray info"
 
 bitwarden 参考一下链接 
 
+apt-get install apache2-utils -y # (for htpasswd)
+
+htpasswd -c ./data/nginx/html/.htpasswd user1
+
  a. bitwarden's config.json will override env config in docker-compose.yml
  b. 如果要用bitwarden,将docker-compose_with_bitwarden.yml改名为docker-compose.yml，nginx的配置里面，关于bitwarden的也要删掉“#”，再做第6步。
 
