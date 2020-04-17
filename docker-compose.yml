@@ -1,6 +1,20 @@
 version: '3'
 
 services:
+# bitwarden:
+#  image: bitwardenrs/server
+#  container_name: bitwarden
+#  restart: always
+#  volumes:
+#  - ./data/bitwarden:/data
+#  environment:
+#    WEBSOCKET_ENABLED: "true"
+#    SIGNUPS_ALLOWED: "true"
+#    DOMAIN: "https://jpkaaa.kkzam.xyz/bwd"
+#    admin_token: "fdwertwert345fgsdfgwe56456"
+#  ports:
+#     - "8080:80"
+      
   nginx:
     image: nginx:latest
     container_name: nginx
