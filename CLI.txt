@@ -72,6 +72,6 @@ curl -fsSL https://get.docker.com -o get-docker.sh \
 
 ./init-letsencrypt.sh \
 && docker ps \
-&& ./data/v2ray/json2vmess.py -m port:443 -m tls:tls -a yourdomain -m ps:yourdomain --debug ./config.json
+&& ./data/v2ray/json2vmess.py -m port:443 -m tls:tls -a yourdomain -m ps:yourdomain --debug ./config.json \
 && docker exec -it v2ray /bin/bash
 v2ray log
