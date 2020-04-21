@@ -19,7 +19,7 @@ wget --no-check-certificate 'https://github.com/cx9208/Linux-NetSpeed/raw/master
 
 # South Korean
 apt update \
-&& apt -y install git nano curl mtr wget speedtest-cli \
+&& apt -y install git nano curl mtr wget speedtest-cli iftop \
 && curl https://raw.githubusercontent.com/kirincastle/docker-v2ray-php-nginx/master/krsource.list | sudo tee /etc/apt/sources.list \
 && apt update \
 && apt upgrade -y \
