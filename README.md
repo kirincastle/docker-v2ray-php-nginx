@@ -130,7 +130,7 @@ docker exec v2ray bash -c "v2ray info"
 
 9. run below cli to get vmess link
 
-./data/v2ray/json2vmess.py -m port:443 -m tls:tls -a yourdomain -m ps:yourdomain -m security:none --debug ./config.json
+./data/v2ray/json2vmess.py -m port:443 -m tls:tls -a yourdomain -m ps:yourdomain --debug ./config.json
 
 #######
 
