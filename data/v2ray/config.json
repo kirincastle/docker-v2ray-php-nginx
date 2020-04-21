@@ -57,7 +57,7 @@
         "security": "none",
         "quicSettings": {},
         "wsSettings": {
-          "path": "/iffedfasdfwerwdrZ",
+          "path": "/websocketpath",
           "headers": {
             "Host": "yourdomain"
           }
@@ -75,7 +75,7 @@
       "settings": {
         "clients": [
           {
-            "id": "6bsdfae4-79ab-11ea-bc55-0242ac130003",
+            "id": "v2rayclientid",
             "alterId": 88
           }
         ]
