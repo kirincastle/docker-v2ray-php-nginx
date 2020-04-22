@@ -22,7 +22,7 @@ https://github.com/Jrohy/multi-v2ray
 
 1. 安装bbr plus
 
-apt -y install git
+apt -y install git python3
 
 
 git clone https://github.com/kirincastle/docker-v2ray-php-nginx.git
