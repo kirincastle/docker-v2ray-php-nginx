@@ -57,9 +57,9 @@
         "security": "none",
         "quicSettings": {},
         "wsSettings": {
-          "path": "/afweggwet",
+          "path": "/test",
           "headers": {
-            "Host": "234.com."
+            "Host": "yourdomain"
           }
         }
       },
@@ -75,7 +75,7 @@
       "settings": {
         "clients": [
           {
-            "id": "2356346",
+            "id": "adfadfadfa",
             "alterId": 88
           }
         ]

@@ -12,6 +12,7 @@ https://github.com/Jrohy/multi-v2ray
 
 ## 更新日志
 
+* 2020年4月22日：增加了input.sh,用来快速更改需要的参数
 * 2020年4月17日: 增加了bitwarden，speedtest测速时候的上传问题还是没有解决。
 * 2020年4月9日：增加php7.2-fpm, 使用speedtest，使用 Jrohy/multi-v2ray
 * 2020年3月3日：增加v2ray并使用ws+tls方式实现代理服务；
@@ -89,11 +90,12 @@ git clone https://github.com/kirincastle/docker-v2ray-php-nginx.git
 
 5. 修改v2ray配置
 
-进入`docker-v2ray`目录开始修改配置。
+进入`v2ray`目录开始修改配置,也可以用input.sh来批量改。
 
 **1) `init-letsencrypt.sh`**
 
-将里面的`domains`和`email`修改为自己的域名和邮箱。
+将里面的`yourdomain`和`youremail`修改为自己的域名和邮箱。
+注意staging=1的时候，出来的cert是测试用的，如果测试没有问题，就改为staging=0.
 
 **2) `docker-compose.yml`**
 
@@ -108,7 +110,7 @@ https://www.uuidgenerator.net/version1
 
 **4) `data/nginx/conf.d/v2ray.conf`**
 
-修改所有`your_domain`为自己的域名，其他地方，如果上面可以修改的地方你没修改，那么除了域名之外的也不用修改了。
+修改所有`yourdomain`为自己的域名，其他地方，如果上面可以修改的地方你没修改，那么除了域名之外的也不用修改了。
 
 6. 一键部署v2ray
 
@@ -134,7 +136,7 @@ docker exec v2ray bash -c "v2ray info"
 
 #######
 
-bitwarden 参考一下链接 
+bitwarden 参考以下链接 
 
 apt-get install apache2-utils -y # (for htpasswd)
 

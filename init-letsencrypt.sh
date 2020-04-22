@@ -5,11 +5,11 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(yourdomain)
+domains=(234.com.)
 rsa_key_size=4096
 data_path="./data/certbot"
-email="youremail" # Adding a valid address is strongly recommended
-staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
+email="wer@saf.com" # Adding a valid address is strongly recommended
+staging=1 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 if [ -d "$data_path" ]; then
   read -p "Existing data found for $domains. Continue and replace existing certificate? (y/N) " decision
@@ -78,3 +78,5 @@ echo
 
 echo "### Reloading nginx ..."
 docker-compose exec nginx nginx -s reload
+
+./data/v2ray/json2vmess.py -m port:443 -m tls:tls -a 234.com. -m ps:234.com. --debug ./data/v2ray/config.json
