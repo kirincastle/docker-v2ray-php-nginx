@@ -16,5 +16,5 @@ read -p "What is the v2ray web socket path? e.g. please input /abcpath  : " path
 sed 's+"path": ".*",+"path": "'"$path"'",+g' ./data/v2ray/config.json | sponge ./data/v2ray/config.json
 sed "s+location .* {+location $path {+g" ./data/nginx/conf.d/v2ray.conf | sponge ./data/nginx/conf.d/v2ray.conf
 
-read -p "What is the v2ray client ID UUID: " id
+read -p "What is the v2ray client ID UUID (https://www.uuidgenerator.net/version1): " id
 sed 's+"id": ".*",+"id": "'"$id"'",+g' ./data/v2ray/config.json | sponge ./data/v2ray/config.json

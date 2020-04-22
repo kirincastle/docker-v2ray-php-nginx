@@ -5,10 +5,10 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(234.com.)
+domains=(yourdomain)
 rsa_key_size=4096
 data_path="./data/certbot"
-email="wer@saf.com" # Adding a valid address is strongly recommended
+email="youremail" # Adding a valid address is strongly recommended
 staging=1 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 if [ -d "$data_path" ]; then
@@ -79,4 +79,4 @@ echo
 echo "### Reloading nginx ..."
 docker-compose exec nginx nginx -s reload
 
-./data/v2ray/json2vmess.py -m port:443 -m tls:tls -a 234.com. -m ps:234.com. --debug ./data/v2ray/config.json
+./data/v2ray/json2vmess.py -m port:443 -m tls:tls -a yourdomain -m ps:yourdomain --debug ./data/v2ray/config.json
