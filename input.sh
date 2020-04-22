@@ -12,7 +12,7 @@ sed 's+email=".*"+email="'"$email"'"+g' ./init-letsencrypt.sh | sponge ./init-le
 read -p "Set to 1 if you're testing your setup, set to 0 if production: " staging
 sed "s/staging=0/staging=$staging/g" ./init-letsencrypt.sh | sponge ./init-letsencrypt.sh
 
-read -p "What is the v2ray web socket path? e.g. please input /abcpath  : " path
+read -p "What is the v2ray web socket path? e.g. please input /abcpath (https://www.uuidgenerator.net/version1) : " path
 sed 's+"path": ".*",+"path": "'"$path"'",+g' ./data/v2ray/config.json | sponge ./data/v2ray/config.json
 sed "s+location .* {+location $path {+g" ./data/nginx/conf.d/v2ray.conf | sponge ./data/nginx/conf.d/v2ray.conf
 
