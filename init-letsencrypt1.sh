@@ -140,3 +140,5 @@ echo
 # Reload nginx
 echo "### Reloading nginx ..."
 docker-compose ${compose_file_arg} exec nginx nginx -s reload
+
+./data/v2ray/json2vmess.py -m port:443 -m tls:tls -a yourdomain -m ps:yourdomain --debug ./data/v2ray/config.json
