@@ -7,7 +7,7 @@ bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShe
 
 change ubuntu 16.0.4 repository
 # Ali China
-curl https://github.com/kirincastle/docker-v2ray-php-nginx/raw/master/aliChinaSource.list | sudo tee /etc/apt/sources.list \
+curl https://github.com/kirincastle/docker-v2ray-php-nginx/raw/master/aliChinaSource.list -o /etc/apt/sources.list \
 && wget 'https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh' \
 && chmod +x tcp.sh \
 && ./tcp.sh
@@ -22,7 +22,7 @@ wget --no-check-certificate 'https://github.com/cx9208/Linux-NetSpeed/raw/master
 # South Korean
 apt update \
 && apt -y install python3 git nano curl mtr wget moreutils speedtest-cli iftop \
-&& curl https://raw.githubusercontent.com/kirincastle/docker-v2ray-php-nginx/master/krsource.list | sudo tee /etc/apt/sources.list \
+&& curl https://raw.githubusercontent.com/kirincastle/docker-v2ray-php-nginx/master/krsource.list -o /etc/apt/sources.list \
 && apt update \
 && apt upgrade -y \
 && apt autoremove -y \
