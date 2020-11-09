@@ -37,7 +37,7 @@ services:
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
   
   v2ray:
-    image: jrohy/v2ray
+    image: teddysun/v2ray:latest
     container_name: v2ray
     environment:
       - TZ=Asia/Shanghai
